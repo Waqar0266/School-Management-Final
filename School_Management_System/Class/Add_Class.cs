@@ -76,6 +76,7 @@ namespace School_Management_System.Class
             if (string.IsNullOrEmpty(section_Txtbox.Text))
             {
                 errorSection_lbl.Visible = true; 
+                /////asad
              
             }
             if (string.IsNullOrEmpty(noStd_Txtbox.Text))
