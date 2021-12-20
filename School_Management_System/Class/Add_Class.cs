@@ -75,7 +75,8 @@ namespace School_Management_System.Class
             }
             if (string.IsNullOrEmpty(section_Txtbox.Text))
             {
-                errorSection_lbl.Visible = true;
+                errorSection_lbl.Visible = true; 
+             
             }
             if (string.IsNullOrEmpty(noStd_Txtbox.Text))
             {
