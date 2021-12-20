@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="10d464624c7a40d6ab8de161e6b885cd" Name="Diagram1">
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.asset" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.class" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.exam" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.expense" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.fee" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.notice" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.Operator" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.paper" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.parent" Width="1.5" PointX="3.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.role" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.salary" Width="1.5" PointX="5.25" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.staff_attendance" Width="1.5" PointX="5.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.student" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.student_attendance" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.subject" Width="1.5" PointX="3" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.teacher" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.test" Width="1.5" PointX="8.25" PointY="16.875" IsExpanded="true" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__fee__class_id__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__paper__cls_id__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__student_a__cls_i__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__subject__class_i__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__test__cls_id__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.fk_class_id" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__fee__student_id__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__Operator__role_i__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__paper__sub_id__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__paper__t_id__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.fk_parent_id" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__salary__t_id__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__staff_atte__t_id__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.fk_student_id" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK__test__sub_id__2E1BDC42" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

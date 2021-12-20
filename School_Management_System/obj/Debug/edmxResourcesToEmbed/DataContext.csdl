@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolManagementSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="asset">
+    <Key>
+      <PropertyRef Name="as_id" />
+    </Key>
+    <Property Name="as_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="name_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="date_" Type="DateTime" Precision="0" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="descripition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="class">
+    <Key>
+      <PropertyRef Name="class_id" />
+    </Key>
+    <Property Name="class_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="no_of_std" Type="Int32" />
+    <Property Name="no_of_chairs" Type="Int32" />
+    <Property Name="no_of_tables" Type="Int32" />
+    <Property Name="section_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="fees" Relationship="Self.FK__fee__class_id__20C1E124" FromRole="class" ToRole="fee" />
+    <NavigationProperty Name="papers" Relationship="Self.FK__paper__cls_id__29572725" FromRole="class" ToRole="paper" />
+    <NavigationProperty Name="student_attendance" Relationship="Self.FK__student_a__cls_i__182C9B23" FromRole="class" ToRole="student_attendance" />
+    <NavigationProperty Name="subjects" Relationship="Self.FK__subject__class_i__267ABA7A" FromRole="class" ToRole="subject" />
+    <NavigationProperty Name="tests" Relationship="Self.FK__test__cls_id__2F10007B" FromRole="class" ToRole="test" />
+    <NavigationProperty Name="students" Relationship="Self.fk_class_id" FromRole="class" ToRole="student" />
+  </EntityType>
+  <EntityType Name="exam">
+    <Key>
+      <PropertyRef Name="ex_id" />
+    </Key>
+    <Property Name="ex_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="date_" Type="DateTime" Precision="0" />
+    <Property Name="fee" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="descripition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="expense">
+    <Key>
+      <PropertyRef Name="ex_id" />
+    </Key>
+    <Property Name="ex_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ex_type" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="name_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="date_" Type="DateTime" Precision="0" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="descripition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="fee">
+    <Key>
+      <PropertyRef Name="fee_id" />
+    </Key>
+    <Property Name="fee_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="student_id" Type="Int32" />
+    <Property Name="class_id" Type="Int32" />
+    <Property Name="Month_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="last_month_chrg" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="total_fee" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="discount" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="sub_total" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="paid" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="remaning" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="issue_date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="class" Relationship="Self.FK__fee__class_id__20C1E124" FromRole="fee" ToRole="class" />
+    <NavigationProperty Name="student" Relationship="Self.FK__fee__student_id__21B6055D" FromRole="fee" ToRole="student" />
+  </EntityType>
+  <EntityType Name="notice">
+    <Key>
+      <PropertyRef Name="notices_id" />
+    </Key>
+    <Property Name="notices_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date_" Type="DateTime" Precision="0" />
+    <Property Name="descripition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Operator">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="first_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="user_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="password_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="role" Relationship="Self.FK__Operator__role_i__412EB0B6" FromRole="Operator" ToRole="role" />
+  </EntityType>
+  <EntityType Name="paper">
+    <Key>
+      <PropertyRef Name="p_id" />
+    </Key>
+    <Property Name="p_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cls_id" Type="Int32" />
+    <Property Name="t_id" Type="Int32" />
+    <Property Name="sub_id" Type="Int32" />
+    <Property Name="date_" Type="DateTime" Precision="0" />
+    <Property Name="descripition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="pic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="class" Relationship="Self.FK__paper__cls_id__29572725" FromRole="paper" ToRole="class" />
+    <NavigationProperty Name="subject" Relationship="Self.FK__paper__sub_id__2B3F6F97" FromRole="paper" ToRole="subject" />
+    <NavigationProperty Name="teacher" Relationship="Self.FK__paper__t_id__2A4B4B5E" FromRole="paper" ToRole="teacher" />
+  </EntityType>
+  <EntityType Name="parent">
+    <Key>
+      <PropertyRef Name="pr_id" />
+    </Key>
+    <Property Name="pr_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cnic" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cell_no" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="occupation" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="office_no" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="monthly_income" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="status" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="students" Relationship="Self.fk_parent_id" FromRole="parent" ToRole="student" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="role_id" />
+    </Key>
+    <Property Name="role_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date_" Type="DateTime" Precision="0" />
+    <Property Name="name_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="descripition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Operators" Relationship="Self.FK__Operator__role_i__412EB0B6" FromRole="role" ToRole="Operator" />
+  </EntityType>
+  <EntityType Name="salary">
+    <Key>
+      <PropertyRef Name="sal_id" />
+    </Key>
+    <Property Name="sal_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="t_id" Type="Int32" />
+    <Property Name="month_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="issue_date" Type="DateTime" Precision="0" />
+    <Property Name="basic_sal" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="deduction" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="allowances" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="advance_sal" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="total_amount" Type="Decimal" Precision="18" Scale="3" />
+    <NavigationProperty Name="teacher" Relationship="Self.FK__salary__t_id__35BCFE0A" FromRole="salary" ToRole="teacher" />
+  </EntityType>
+  <EntityType Name="staff_attendance">
+    <Key>
+      <PropertyRef Name="atdnce_id" />
+    </Key>
+    <Property Name="atdnce_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="t_id" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="date_" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="teacher" Relationship="Self.FK__staff_atte__t_id__38996AB5" FromRole="staff_attendance" ToRole="teacher" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="std_id" />
+    </Key>
+    <Property Name="std_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="f_id" Type="Int32" />
+    <Property Name="class_id" Type="Int32" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <Property Name="admission_date" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cell_no" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="class" Relationship="Self.fk_class_id" FromRole="student" ToRole="class" />
+    <NavigationProperty Name="fees" Relationship="Self.FK__fee__student_id__21B6055D" FromRole="student" ToRole="fee" />
+    <NavigationProperty Name="parent" Relationship="Self.fk_parent_id" FromRole="student" ToRole="parent" />
+    <NavigationProperty Name="student_attendance" Relationship="Self.fk_student_id" FromRole="student" ToRole="student_attendance" />
+  </EntityType>
+  <EntityType Name="student_attendance">
+    <Key>
+      <PropertyRef Name="att_id" />
+    </Key>
+    <Property Name="att_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="std_id" Type="Int32" />
+    <Property Name="cls_id" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="date_" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="class" Relationship="Self.FK__student_a__cls_i__182C9B23" FromRole="student_attendance" ToRole="class" />
+    <NavigationProperty Name="student" Relationship="Self.fk_student_id" FromRole="student_attendance" ToRole="student" />
+  </EntityType>
+  <EntityType Name="subject">
+    <Key>
+      <PropertyRef Name="sub_id" />
+    </Key>
+    <Property Name="sub_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="class_id" Type="Int32" />
+    <Property Name="author" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="descripition" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="class" Relationship="Self.FK__subject__class_i__267ABA7A" FromRole="subject" ToRole="class" />
+    <NavigationProperty Name="papers" Relationship="Self.FK__paper__sub_id__2B3F6F97" FromRole="subject" ToRole="paper" />
+    <NavigationProperty Name="tests" Relationship="Self.FK__test__sub_id__2E1BDC42" FromRole="subject" ToRole="test" />
+  </EntityType>
+  <EntityType Name="teacher">
+    <Key>
+      <PropertyRef Name="t_id" />
+    </Key>
+    <Property Name="t_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emp_num" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="name_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="f_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="subject" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <Property Name="join_date" Type="DateTime" Precision="0" />
+    <Property Name="qualification" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cell_no" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cnic" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="descripition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="papers" Relationship="Self.FK__paper__t_id__2A4B4B5E" FromRole="teacher" ToRole="paper" />
+    <NavigationProperty Name="salaries" Relationship="Self.FK__salary__t_id__35BCFE0A" FromRole="teacher" ToRole="salary" />
+    <NavigationProperty Name="staff_attendance" Relationship="Self.FK__staff_atte__t_id__38996AB5" FromRole="teacher" ToRole="staff_attendance" />
+  </EntityType>
+  <EntityType Name="test">
+    <Key>
+      <PropertyRef Name="t_id" />
+    </Key>
+    <Property Name="t_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cls_id" Type="Int32" />
+    <Property Name="sub_id" Type="Int32" />
+    <Property Name="date_" Type="DateTime" Precision="0" />
+    <Property Name="descripition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="class" Relationship="Self.FK__test__cls_id__2F10007B" FromRole="test" ToRole="class" />
+    <NavigationProperty Name="subject" Relationship="Self.FK__test__sub_id__2E1BDC42" FromRole="test" ToRole="subject" />
+  </EntityType>
+  <Association Name="FK__fee__class_id__20C1E124">
+    <End Role="class" Type="Self.class" Multiplicity="0..1" />
+    <End Role="fee" Type="Self.fee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="fee">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__paper__cls_id__29572725">
+    <End Role="class" Type="Self.class" Multiplicity="0..1" />
+    <End Role="paper" Type="Self.paper" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="paper">
+        <PropertyRef Name="cls_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student_a__cls_i__182C9B23">
+    <End Role="class" Type="Self.class" Multiplicity="0..1" />
+    <End Role="student_attendance" Type="Self.student_attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="student_attendance">
+        <PropertyRef Name="cls_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__subject__class_i__267ABA7A">
+    <End Role="class" Type="Self.class" Multiplicity="0..1" />
+    <End Role="subject" Type="Self.subject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="subject">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__test__cls_id__2F10007B">
+    <End Role="class" Type="Self.class" Multiplicity="0..1" />
+    <End Role="test" Type="Self.test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="test">
+        <PropertyRef Name="cls_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_class_id">
+    <End Role="class" Type="Self.class" Multiplicity="0..1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fee__student_id__21B6055D">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="fee" Type="Self.fee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="std_id" />
+      </Principal>
+      <Dependent Role="fee">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Operator__role_i__412EB0B6">
+    <End Role="role" Type="Self.role" Multiplicity="0..1" />
+    <End Role="Operator" Type="Self.Operator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="role_id" />
+      </Principal>
+      <Dependent Role="Operator">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__paper__sub_id__2B3F6F97">
+    <End Role="subject" Type="Self.subject" Multiplicity="0..1" />
+    <End Role="paper" Type="Self.paper" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subject">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="paper">
+        <PropertyRef Name="sub_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__paper__t_id__2A4B4B5E">
+    <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
+    <End Role="paper" Type="Self.paper" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="t_id" />
+      </Principal>
+      <Dependent Role="paper">
+        <PropertyRef Name="t_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_parent_id">
+    <End Role="parent" Type="Self.parent" Multiplicity="0..1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="parent">
+        <PropertyRef Name="pr_id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="f_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__salary__t_id__35BCFE0A">
+    <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
+    <End Role="salary" Type="Self.salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="t_id" />
+      </Principal>
+      <Dependent Role="salary">
+        <PropertyRef Name="t_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__staff_atte__t_id__38996AB5">
+    <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
+    <End Role="staff_attendance" Type="Self.staff_attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="t_id" />
+      </Principal>
+      <Dependent Role="staff_attendance">
+        <PropertyRef Name="t_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_student_id">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="student_attendance" Type="Self.student_attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="std_id" />
+      </Principal>
+      <Dependent Role="student_attendance">
+        <PropertyRef Name="std_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__test__sub_id__2E1BDC42">
+    <End Role="subject" Type="Self.subject" Multiplicity="0..1" />
+    <End Role="test" Type="Self.test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subject">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="test">
+        <PropertyRef Name="sub_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SchoolManagementSystemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="assets" EntityType="Self.asset" />
+    <EntitySet Name="classes" EntityType="Self.class" />
+    <EntitySet Name="exams" EntityType="Self.exam" />
+    <EntitySet Name="expenses" EntityType="Self.expense" />
+    <EntitySet Name="fees" EntityType="Self.fee" />
+    <EntitySet Name="notices" EntityType="Self.notice" />
+    <EntitySet Name="Operators" EntityType="Self.Operator" />
+    <EntitySet Name="papers" EntityType="Self.paper" />
+    <EntitySet Name="parents" EntityType="Self.parent" />
+    <EntitySet Name="roles" EntityType="Self.role" />
+    <EntitySet Name="salaries" EntityType="Self.salary" />
+    <EntitySet Name="staff_attendance" EntityType="Self.staff_attendance" />
+    <EntitySet Name="students" EntityType="Self.student" />
+    <EntitySet Name="student_attendance" EntityType="Self.student_attendance" />
+    <EntitySet Name="subjects" EntityType="Self.subject" />
+    <EntitySet Name="teachers" EntityType="Self.teacher" />
+    <EntitySet Name="tests" EntityType="Self.test" />
+    <AssociationSet Name="FK__fee__class_id__20C1E124" Association="Self.FK__fee__class_id__20C1E124">
+      <End Role="class" EntitySet="classes" />
+      <End Role="fee" EntitySet="fees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__paper__cls_id__29572725" Association="Self.FK__paper__cls_id__29572725">
+      <End Role="class" EntitySet="classes" />
+      <End Role="paper" EntitySet="papers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student_a__cls_i__182C9B23" Association="Self.FK__student_a__cls_i__182C9B23">
+      <End Role="class" EntitySet="classes" />
+      <End Role="student_attendance" EntitySet="student_attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__subject__class_i__267ABA7A" Association="Self.FK__subject__class_i__267ABA7A">
+      <End Role="class" EntitySet="classes" />
+      <End Role="subject" EntitySet="subjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK__test__cls_id__2F10007B" Association="Self.FK__test__cls_id__2F10007B">
+      <End Role="class" EntitySet="classes" />
+      <End Role="test" EntitySet="tests" />
+    </AssociationSet>
+    <AssociationSet Name="fk_class_id" Association="Self.fk_class_id">
+      <End Role="class" EntitySet="classes" />
+      <End Role="student" EntitySet="students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fee__student_id__21B6055D" Association="Self.FK__fee__student_id__21B6055D">
+      <End Role="student" EntitySet="students" />
+      <End Role="fee" EntitySet="fees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Operator__role_i__412EB0B6" Association="Self.FK__Operator__role_i__412EB0B6">
+      <End Role="role" EntitySet="roles" />
+      <End Role="Operator" EntitySet="Operators" />
+    </AssociationSet>
+    <AssociationSet Name="FK__paper__sub_id__2B3F6F97" Association="Self.FK__paper__sub_id__2B3F6F97">
+      <End Role="subject" EntitySet="subjects" />
+      <End Role="paper" EntitySet="papers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__paper__t_id__2A4B4B5E" Association="Self.FK__paper__t_id__2A4B4B5E">
+      <End Role="teacher" EntitySet="teachers" />
+      <End Role="paper" EntitySet="papers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_parent_id" Association="Self.fk_parent_id">
+      <End Role="parent" EntitySet="parents" />
+      <End Role="student" EntitySet="students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__salary__t_id__35BCFE0A" Association="Self.FK__salary__t_id__35BCFE0A">
+      <End Role="teacher" EntitySet="teachers" />
+      <End Role="salary" EntitySet="salaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__staff_atte__t_id__38996AB5" Association="Self.FK__staff_atte__t_id__38996AB5">
+      <End Role="teacher" EntitySet="teachers" />
+      <End Role="staff_attendance" EntitySet="staff_attendance" />
+    </AssociationSet>
+    <AssociationSet Name="fk_student_id" Association="Self.fk_student_id">
+      <End Role="student" EntitySet="students" />
+      <End Role="student_attendance" EntitySet="student_attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__test__sub_id__2E1BDC42" Association="Self.FK__test__sub_id__2E1BDC42">
+      <End Role="subject" EntitySet="subjects" />
+      <End Role="test" EntitySet="tests" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

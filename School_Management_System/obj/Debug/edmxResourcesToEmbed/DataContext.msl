@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SchoolManagementSystemModelStoreContainer" CdmEntityContainer="SchoolManagementSystemEntities">
+    <EntitySetMapping Name="assets">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.asset">
+        <MappingFragment StoreEntitySet="assets">
+          <ScalarProperty Name="as_id" ColumnName="as_id" />
+          <ScalarProperty Name="type_" ColumnName="type_" />
+          <ScalarProperty Name="name_" ColumnName="name_" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="descripition" ColumnName="descripition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classes">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.class">
+        <MappingFragment StoreEntitySet="class">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="no_of_std" ColumnName="no_of_std" />
+          <ScalarProperty Name="no_of_chairs" ColumnName="no_of_chairs" />
+          <ScalarProperty Name="no_of_tables" ColumnName="no_of_tables" />
+          <ScalarProperty Name="section_" ColumnName="section_" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exams">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.exam">
+        <MappingFragment StoreEntitySet="exam">
+          <ScalarProperty Name="ex_id" ColumnName="ex_id" />
+          <ScalarProperty Name="type_" ColumnName="type_" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+          <ScalarProperty Name="fee" ColumnName="fee" />
+          <ScalarProperty Name="descripition" ColumnName="descripition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="expenses">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.expense">
+        <MappingFragment StoreEntitySet="expense">
+          <ScalarProperty Name="ex_id" ColumnName="ex_id" />
+          <ScalarProperty Name="ex_type" ColumnName="ex_type" />
+          <ScalarProperty Name="name_" ColumnName="name_" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="descripition" ColumnName="descripition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fees">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.fee">
+        <MappingFragment StoreEntitySet="fee">
+          <ScalarProperty Name="fee_id" ColumnName="fee_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="Month_" ColumnName="Month_" />
+          <ScalarProperty Name="last_month_chrg" ColumnName="last_month_chrg" />
+          <ScalarProperty Name="total_fee" ColumnName="total_fee" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="sub_total" ColumnName="sub_total" />
+          <ScalarProperty Name="paid" ColumnName="paid" />
+          <ScalarProperty Name="remaning" ColumnName="remaning" />
+          <ScalarProperty Name="issue_date" ColumnName="issue_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notices">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.notice">
+        <MappingFragment StoreEntitySet="notices">
+          <ScalarProperty Name="notices_id" ColumnName="notices_id" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+          <ScalarProperty Name="descripition" ColumnName="descripition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operators">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.Operator">
+        <MappingFragment StoreEntitySet="Operator">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password_" ColumnName="password_" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="papers">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.paper">
+        <MappingFragment StoreEntitySet="paper">
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="cls_id" ColumnName="cls_id" />
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+          <ScalarProperty Name="sub_id" ColumnName="sub_id" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+          <ScalarProperty Name="descripition" ColumnName="descripition" />
+          <ScalarProperty Name="pic" ColumnName="pic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parents">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.parent">
+        <MappingFragment StoreEntitySet="parent">
+          <ScalarProperty Name="pr_id" ColumnName="pr_id" />
+          <ScalarProperty Name="name_" ColumnName="name_" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="cnic" ColumnName="cnic" />
+          <ScalarProperty Name="cell_no" ColumnName="cell_no" />
+          <ScalarProperty Name="occupation" ColumnName="occupation" />
+          <ScalarProperty Name="office_no" ColumnName="office_no" />
+          <ScalarProperty Name="monthly_income" ColumnName="monthly_income" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.role">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+          <ScalarProperty Name="name_" ColumnName="name_" />
+          <ScalarProperty Name="descripition" ColumnName="descripition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salaries">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.salary">
+        <MappingFragment StoreEntitySet="salary">
+          <ScalarProperty Name="sal_id" ColumnName="sal_id" />
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+          <ScalarProperty Name="month_" ColumnName="month_" />
+          <ScalarProperty Name="issue_date" ColumnName="issue_date" />
+          <ScalarProperty Name="basic_sal" ColumnName="basic_sal" />
+          <ScalarProperty Name="deduction" ColumnName="deduction" />
+          <ScalarProperty Name="allowances" ColumnName="allowances" />
+          <ScalarProperty Name="advance_sal" ColumnName="advance_sal" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staff_attendance">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.staff_attendance">
+        <MappingFragment StoreEntitySet="staff_attendance">
+          <ScalarProperty Name="atdnce_id" ColumnName="atdnce_id" />
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="std_id" ColumnName="std_id" />
+          <ScalarProperty Name="name_" ColumnName="name_" />
+          <ScalarProperty Name="f_id" ColumnName="f_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="admission_date" ColumnName="admission_date" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="cell_no" ColumnName="cell_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student_attendance">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.student_attendance">
+        <MappingFragment StoreEntitySet="student_attendance">
+          <ScalarProperty Name="att_id" ColumnName="att_id" />
+          <ScalarProperty Name="std_id" ColumnName="std_id" />
+          <ScalarProperty Name="cls_id" ColumnName="cls_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subjects">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.subject">
+        <MappingFragment StoreEntitySet="subject">
+          <ScalarProperty Name="sub_id" ColumnName="sub_id" />
+          <ScalarProperty Name="name_" ColumnName="name_" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="descripition" ColumnName="descripition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teachers">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.teacher">
+        <MappingFragment StoreEntitySet="teacher">
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+          <ScalarProperty Name="emp_num" ColumnName="emp_num" />
+          <ScalarProperty Name="name_" ColumnName="name_" />
+          <ScalarProperty Name="f_name" ColumnName="f_name" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="join_date" ColumnName="join_date" />
+          <ScalarProperty Name="qualification" ColumnName="qualification" />
+          <ScalarProperty Name="cell_no" ColumnName="cell_no" />
+          <ScalarProperty Name="cnic" ColumnName="cnic" />
+          <ScalarProperty Name="descripition" ColumnName="descripition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tests">
+      <EntityTypeMapping TypeName="SchoolManagementSystemModel.test">
+        <MappingFragment StoreEntitySet="test">
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+          <ScalarProperty Name="type_" ColumnName="type_" />
+          <ScalarProperty Name="cls_id" ColumnName="cls_id" />
+          <ScalarProperty Name="sub_id" ColumnName="sub_id" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+          <ScalarProperty Name="descripition" ColumnName="descripition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
