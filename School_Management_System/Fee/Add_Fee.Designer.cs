@@ -28,218 +28,222 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnadd = new System.Windows.Forms.Button();
+            this.feeStd_lbl = new System.Windows.Forms.Label();
+            this.feeLastMonthCharges_txtbox = new System.Windows.Forms.TextBox();
+            this.feeClassId_comboBox = new System.Windows.Forms.ComboBox();
+            this.feeClassId_lbl = new System.Windows.Forms.Label();
+            this.feeStd_comboBox = new System.Windows.Forms.ComboBox();
+            this.feeMoth_lbl = new System.Windows.Forms.Label();
+            this.feeLastMonthCharges_lbl = new System.Windows.Forms.Label();
+            this.feeDiscount_lbl = new System.Windows.Forms.Label();
+            this.feeTotal_lbl = new System.Windows.Forms.Label();
+            this.feeTotal_txtbox = new System.Windows.Forms.TextBox();
+            this.feeDiscount_txtbox = new System.Windows.Forms.TextBox();
+            this.feeSubTotal_txtbox = new System.Windows.Forms.TextBox();
+            this.feePaid_lbl = new System.Windows.Forms.Label();
+            this.feeSubTotal_lbl = new System.Windows.Forms.Label();
+            this.feePaid_txtbox = new System.Windows.Forms.TextBox();
+            this.feeRemaining_txtbox = new System.Windows.Forms.TextBox();
+            this.feeRemaining_lbl = new System.Windows.Forms.Label();
+            this.feeDate_txtbox = new System.Windows.Forms.DateTimePicker();
+            this.feeDate_lbl = new System.Windows.Forms.Label();
+            this.feeAdd_btn = new System.Windows.Forms.Button();
             this.lblfee = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.feeMonth_txtbox = new System.Windows.Forms.TextBox();
+            this.generateFeeSlip_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // feeStd_lbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label1.Location = new System.Drawing.Point(12, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Student Name-ID:";
+            this.feeStd_lbl.AutoSize = true;
+            this.feeStd_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeStd_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feeStd_lbl.Location = new System.Drawing.Point(393, 83);
+            this.feeStd_lbl.Name = "feeStd_lbl";
+            this.feeStd_lbl.Size = new System.Drawing.Size(154, 20);
+            this.feeStd_lbl.TabIndex = 0;
+            this.feeStd_lbl.Text = "Student Name-ID:";
             // 
-            // textBox1
+            // feeLastMonthCharges_txtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(556, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 26);
-            this.textBox1.TabIndex = 1;
+            this.feeLastMonthCharges_txtbox.Location = new System.Drawing.Point(556, 239);
+            this.feeLastMonthCharges_txtbox.Name = "feeLastMonthCharges_txtbox";
+            this.feeLastMonthCharges_txtbox.Size = new System.Drawing.Size(203, 26);
+            this.feeLastMonthCharges_txtbox.TabIndex = 1;
             // 
-            // comboBox1
+            // feeClassId_comboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(556, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 28);
-            this.comboBox1.TabIndex = 2;
+            this.feeClassId_comboBox.FormattingEnabled = true;
+            this.feeClassId_comboBox.Location = new System.Drawing.Point(165, 82);
+            this.feeClassId_comboBox.Name = "feeClassId_comboBox";
+            this.feeClassId_comboBox.Size = new System.Drawing.Size(203, 28);
+            this.feeClassId_comboBox.TabIndex = 2;
+            this.feeClassId_comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label2
+            // feeClassId_lbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label2.Location = new System.Drawing.Point(407, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Class Name-ID:";
+            this.feeClassId_lbl.AutoSize = true;
+            this.feeClassId_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeClassId_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feeClassId_lbl.Location = new System.Drawing.Point(16, 90);
+            this.feeClassId_lbl.Name = "feeClassId_lbl";
+            this.feeClassId_lbl.Size = new System.Drawing.Size(134, 20);
+            this.feeClassId_lbl.TabIndex = 4;
+            this.feeClassId_lbl.Text = "Class Name-ID:";
             // 
-            // comboBox2
+            // feeStd_comboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(165, 84);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(203, 28);
-            this.comboBox2.TabIndex = 2;
+            this.feeStd_comboBox.FormattingEnabled = true;
+            this.feeStd_comboBox.Location = new System.Drawing.Point(556, 82);
+            this.feeStd_comboBox.Name = "feeStd_comboBox";
+            this.feeStd_comboBox.Size = new System.Drawing.Size(203, 28);
+            this.feeStd_comboBox.TabIndex = 2;
             // 
-            // label3
+            // feeMoth_lbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label3.Location = new System.Drawing.Point(92, 137);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Month:";
+            this.feeMoth_lbl.AutoSize = true;
+            this.feeMoth_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeMoth_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feeMoth_lbl.Location = new System.Drawing.Point(92, 137);
+            this.feeMoth_lbl.Name = "feeMoth_lbl";
+            this.feeMoth_lbl.Size = new System.Drawing.Size(64, 20);
+            this.feeMoth_lbl.TabIndex = 5;
+            this.feeMoth_lbl.Text = "Month:";
             // 
-            // label4
+            // feeLastMonthCharges_lbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label4.Location = new System.Drawing.Point(375, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Last Month Charges:";
+            this.feeLastMonthCharges_lbl.AutoSize = true;
+            this.feeLastMonthCharges_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeLastMonthCharges_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feeLastMonthCharges_lbl.Location = new System.Drawing.Point(375, 239);
+            this.feeLastMonthCharges_lbl.Name = "feeLastMonthCharges_lbl";
+            this.feeLastMonthCharges_lbl.Size = new System.Drawing.Size(176, 20);
+            this.feeLastMonthCharges_lbl.TabIndex = 6;
+            this.feeLastMonthCharges_lbl.Text = "Last Month Charges:";
             // 
-            // label5
+            // feeDiscount_lbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label5.Location = new System.Drawing.Point(466, 196);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Discount:";
+            this.feeDiscount_lbl.AutoSize = true;
+            this.feeDiscount_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeDiscount_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feeDiscount_lbl.Location = new System.Drawing.Point(466, 196);
+            this.feeDiscount_lbl.Name = "feeDiscount_lbl";
+            this.feeDiscount_lbl.Size = new System.Drawing.Size(85, 20);
+            this.feeDiscount_lbl.TabIndex = 7;
+            this.feeDiscount_lbl.Text = "Discount:";
             // 
-            // label6
+            // feeTotal_lbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label6.Location = new System.Drawing.Point(66, 187);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Total Fee:";
+            this.feeTotal_lbl.AutoSize = true;
+            this.feeTotal_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeTotal_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feeTotal_lbl.Location = new System.Drawing.Point(66, 187);
+            this.feeTotal_lbl.Name = "feeTotal_lbl";
+            this.feeTotal_lbl.Size = new System.Drawing.Size(90, 20);
+            this.feeTotal_lbl.TabIndex = 8;
+            this.feeTotal_lbl.Text = "Total Fee:";
             // 
-            // textBox2
+            // feeTotal_txtbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(165, 184);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 26);
-            this.textBox2.TabIndex = 1;
+            this.feeTotal_txtbox.Location = new System.Drawing.Point(165, 184);
+            this.feeTotal_txtbox.Name = "feeTotal_txtbox";
+            this.feeTotal_txtbox.Size = new System.Drawing.Size(203, 26);
+            this.feeTotal_txtbox.TabIndex = 1;
             // 
-            // textBox3
+            // feeDiscount_txtbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(556, 190);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(203, 26);
-            this.textBox3.TabIndex = 1;
+            this.feeDiscount_txtbox.Location = new System.Drawing.Point(556, 190);
+            this.feeDiscount_txtbox.Name = "feeDiscount_txtbox";
+            this.feeDiscount_txtbox.Size = new System.Drawing.Size(203, 26);
+            this.feeDiscount_txtbox.TabIndex = 1;
+            this.feeDiscount_txtbox.TextChanged += new System.EventHandler(this.feeDiscount_txtbox_TextChanged);
             // 
-            // textBox4
+            // feeSubTotal_txtbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(165, 233);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 26);
-            this.textBox4.TabIndex = 1;
+            this.feeSubTotal_txtbox.Location = new System.Drawing.Point(165, 233);
+            this.feeSubTotal_txtbox.Name = "feeSubTotal_txtbox";
+            this.feeSubTotal_txtbox.Size = new System.Drawing.Size(203, 26);
+            this.feeSubTotal_txtbox.TabIndex = 1;
             // 
-            // label7
+            // feePaid_lbl
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label7.Location = new System.Drawing.Point(501, 249);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Paid:";
+            this.feePaid_lbl.AutoSize = true;
+            this.feePaid_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feePaid_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feePaid_lbl.Location = new System.Drawing.Point(110, 299);
+            this.feePaid_lbl.Name = "feePaid_lbl";
+            this.feePaid_lbl.Size = new System.Drawing.Size(49, 20);
+            this.feePaid_lbl.TabIndex = 7;
+            this.feePaid_lbl.Text = "Paid:";
             // 
-            // label8
+            // feeSubTotal_lbl
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label8.Location = new System.Drawing.Point(68, 236);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 20);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Sub Total:";
+            this.feeSubTotal_lbl.AutoSize = true;
+            this.feeSubTotal_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeSubTotal_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feeSubTotal_lbl.Location = new System.Drawing.Point(68, 236);
+            this.feeSubTotal_lbl.Name = "feeSubTotal_lbl";
+            this.feeSubTotal_lbl.Size = new System.Drawing.Size(91, 20);
+            this.feeSubTotal_lbl.TabIndex = 8;
+            this.feeSubTotal_lbl.Text = "Sub Total:";
             // 
-            // textBox5
+            // feePaid_txtbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(556, 243);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(203, 26);
-            this.textBox5.TabIndex = 1;
+            this.feePaid_txtbox.Location = new System.Drawing.Point(165, 293);
+            this.feePaid_txtbox.Name = "feePaid_txtbox";
+            this.feePaid_txtbox.Size = new System.Drawing.Size(203, 26);
+            this.feePaid_txtbox.TabIndex = 1;
+            this.feePaid_txtbox.TextChanged += new System.EventHandler(this.feePaid_txtbox_TextChanged);
             // 
-            // textBox6
+            // feeRemaining_txtbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(165, 282);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(203, 26);
-            this.textBox6.TabIndex = 1;
+            this.feeRemaining_txtbox.Location = new System.Drawing.Point(557, 291);
+            this.feeRemaining_txtbox.Name = "feeRemaining_txtbox";
+            this.feeRemaining_txtbox.Size = new System.Drawing.Size(203, 26);
+            this.feeRemaining_txtbox.TabIndex = 1;
             // 
-            // label9
+            // feeRemaining_lbl
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label9.Location = new System.Drawing.Point(64, 287);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 20);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Remaning:";
+            this.feeRemaining_lbl.AutoSize = true;
+            this.feeRemaining_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeRemaining_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feeRemaining_lbl.Location = new System.Drawing.Point(456, 296);
+            this.feeRemaining_lbl.Name = "feeRemaining_lbl";
+            this.feeRemaining_lbl.Size = new System.Drawing.Size(95, 20);
+            this.feeRemaining_lbl.TabIndex = 8;
+            this.feeRemaining_lbl.Text = "Remaning:";
             // 
-            // dateTimePicker2
+            // feeDate_txtbox
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(556, 296);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(203, 26);
-            this.dateTimePicker2.TabIndex = 3;
+            this.feeDate_txtbox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.feeDate_txtbox.Location = new System.Drawing.Point(556, 137);
+            this.feeDate_txtbox.Name = "feeDate_txtbox";
+            this.feeDate_txtbox.Size = new System.Drawing.Size(203, 26);
+            this.feeDate_txtbox.TabIndex = 3;
             // 
-            // label10
+            // feeDate_lbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
-            this.label10.Location = new System.Drawing.Point(488, 302);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 20);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Date:";
+            this.feeDate_lbl.AutoSize = true;
+            this.feeDate_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeDate_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(163)))));
+            this.feeDate_lbl.Location = new System.Drawing.Point(488, 143);
+            this.feeDate_lbl.Name = "feeDate_lbl";
+            this.feeDate_lbl.Size = new System.Drawing.Size(53, 20);
+            this.feeDate_lbl.TabIndex = 5;
+            this.feeDate_lbl.Text = "Date:";
             // 
-            // btnadd
+            // feeAdd_btn
             // 
-            this.btnadd.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnadd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.ForeColor = System.Drawing.Color.White;
-            this.btnadd.Location = new System.Drawing.Point(284, 379);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(200, 52);
-            this.btnadd.TabIndex = 10;
-            this.btnadd.Text = "Add Fee";
-            this.btnadd.UseVisualStyleBackColor = false;
+            this.feeAdd_btn.BackColor = System.Drawing.Color.SteelBlue;
+            this.feeAdd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.feeAdd_btn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeAdd_btn.ForeColor = System.Drawing.Color.White;
+            this.feeAdd_btn.Location = new System.Drawing.Point(284, 379);
+            this.feeAdd_btn.Name = "feeAdd_btn";
+            this.feeAdd_btn.Size = new System.Drawing.Size(257, 52);
+            this.feeAdd_btn.TabIndex = 10;
+            this.feeAdd_btn.Text = "Add Fee";
+            this.feeAdd_btn.UseVisualStyleBackColor = false;
             // 
             // lblfee
             // 
@@ -252,40 +256,51 @@
             this.lblfee.TabIndex = 11;
             this.lblfee.Text = "Add New Fee";
             // 
-            // textBox7
+            // feeMonth_txtbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(162, 137);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(203, 26);
-            this.textBox7.TabIndex = 12;
+            this.feeMonth_txtbox.Location = new System.Drawing.Point(165, 137);
+            this.feeMonth_txtbox.Name = "feeMonth_txtbox";
+            this.feeMonth_txtbox.Size = new System.Drawing.Size(203, 26);
+            this.feeMonth_txtbox.TabIndex = 12;
+            // 
+            // generateFeeSlip_btn
+            // 
+            this.generateFeeSlip_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateFeeSlip_btn.Location = new System.Drawing.Point(604, 23);
+            this.generateFeeSlip_btn.Name = "generateFeeSlip_btn";
+            this.generateFeeSlip_btn.Size = new System.Drawing.Size(155, 35);
+            this.generateFeeSlip_btn.TabIndex = 13;
+            this.generateFeeSlip_btn.Text = "Generate Slip";
+            this.generateFeeSlip_btn.UseVisualStyleBackColor = true;
             // 
             // Add_Fee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 455);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.generateFeeSlip_btn);
+            this.Controls.Add(this.feeMonth_txtbox);
             this.Controls.Add(this.lblfee);
-            this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.feeAdd_btn);
+            this.Controls.Add(this.feeRemaining_lbl);
+            this.Controls.Add(this.feeSubTotal_lbl);
+            this.Controls.Add(this.feePaid_lbl);
+            this.Controls.Add(this.feeTotal_lbl);
+            this.Controls.Add(this.feeDiscount_lbl);
+            this.Controls.Add(this.feeLastMonthCharges_lbl);
+            this.Controls.Add(this.feeDate_lbl);
+            this.Controls.Add(this.feeMoth_lbl);
+            this.Controls.Add(this.feeDate_txtbox);
+            this.Controls.Add(this.feeClassId_lbl);
+            this.Controls.Add(this.feeRemaining_txtbox);
+            this.Controls.Add(this.feeStd_comboBox);
+            this.Controls.Add(this.feeSubTotal_txtbox);
+            this.Controls.Add(this.feeClassId_comboBox);
+            this.Controls.Add(this.feeTotal_txtbox);
+            this.Controls.Add(this.feePaid_txtbox);
+            this.Controls.Add(this.feeDiscount_txtbox);
+            this.Controls.Add(this.feeLastMonthCharges_txtbox);
+            this.Controls.Add(this.feeStd_lbl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -299,27 +314,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.Label feeStd_lbl;
+        private System.Windows.Forms.TextBox feeLastMonthCharges_txtbox;
+        private System.Windows.Forms.ComboBox feeClassId_comboBox;
+        private System.Windows.Forms.Label feeClassId_lbl;
+        private System.Windows.Forms.ComboBox feeStd_comboBox;
+        private System.Windows.Forms.Label feeMoth_lbl;
+        private System.Windows.Forms.Label feeLastMonthCharges_lbl;
+        private System.Windows.Forms.Label feeDiscount_lbl;
+        private System.Windows.Forms.Label feeTotal_lbl;
+        private System.Windows.Forms.TextBox feeTotal_txtbox;
+        private System.Windows.Forms.TextBox feeDiscount_txtbox;
+        private System.Windows.Forms.TextBox feeSubTotal_txtbox;
+        private System.Windows.Forms.Label feePaid_lbl;
+        private System.Windows.Forms.Label feeSubTotal_lbl;
+        private System.Windows.Forms.TextBox feePaid_txtbox;
+        private System.Windows.Forms.TextBox feeRemaining_txtbox;
+        private System.Windows.Forms.Label feeRemaining_lbl;
+        private System.Windows.Forms.DateTimePicker feeDate_txtbox;
+        private System.Windows.Forms.Label feeDate_lbl;
+        private System.Windows.Forms.Button feeAdd_btn;
         private System.Windows.Forms.Label lblfee;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox feeMonth_txtbox;
+        private System.Windows.Forms.Button generateFeeSlip_btn;
     }
 }

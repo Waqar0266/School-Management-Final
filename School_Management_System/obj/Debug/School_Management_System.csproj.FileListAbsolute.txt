@@ -148,9 +148,6 @@ D:\Youtube\projects\RashiCode School_Management_System\School_Management_System\
 D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Debug\School_Management_System.exe.config
 D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Debug\School_Management_System.exe
 D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Debug\School_Management_System.pdb
-D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Debug\Devart.Data.xml
-D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Debug\Devart.Data.PostgreSql.xml
-D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.csproj.AssemblyReference.cache
 D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.Assets.add_assets.resources
 D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.Assets.Assets_Details.resources
 D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.Attendance.Staff_Attendance.staff.resources
@@ -200,3 +197,10 @@ D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Deb
 D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Debug\EntityFramework.xml
 D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Debug\EntityFramework.SqlServer.xml
 D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.Class.Edit_Class.resources
+D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Debug\School_Management_System.exe.manifest
+D:\Downloads\RashiCode School_Management_System\School_Management_System\bin\Debug\School_Management_System.application
+D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.exe.manifest
+D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.application
+D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.csproj.AssemblyReference.cache
+D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.Student.Edit_Student.resources
+D:\Downloads\RashiCode School_Management_System\School_Management_System\obj\Debug\School_Management_System.Fee.PrintFee_Form.resources

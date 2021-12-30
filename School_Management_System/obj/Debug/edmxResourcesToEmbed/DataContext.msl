@@ -153,6 +153,7 @@
     <EntitySetMapping Name="students">
       <EntityTypeMapping TypeName="SchoolManagementSystemModel.student">
         <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="image" ColumnName="image" />
           <ScalarProperty Name="std_id" ColumnName="std_id" />
           <ScalarProperty Name="name_" ColumnName="name_" />
           <ScalarProperty Name="f_id" ColumnName="f_id" />

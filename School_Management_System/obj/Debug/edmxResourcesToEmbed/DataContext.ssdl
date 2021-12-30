@@ -150,6 +150,7 @@
     <Property Name="admission_date" Type="date" />
     <Property Name="status" Type="varchar" MaxLength="40" />
     <Property Name="cell_no" Type="varchar" MaxLength="40" />
+    <Property Name="image" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="student_attendance">
     <Key>

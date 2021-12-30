@@ -135,7 +135,7 @@ namespace School_Management_System.Class
                     no_of_tables = x.no_of_tables,
                     section_ = x.section_
 
-                }).Where(x => x.name == searchClass_txtbox.Text).ToList();
+                }).Where(x => x.name.Contains(searchClass_txtbox.Text)).ToList();
 
                 class_dataGridView.DataSource = test;
             }

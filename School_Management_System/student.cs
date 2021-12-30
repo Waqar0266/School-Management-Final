@@ -30,6 +30,7 @@ namespace School_Management_System
         public Nullable<System.DateTime> admission_date { get; set; }
         public string status { get; set; }
         public string cell_no { get; set; }
+        public byte[] image { get; set; }
     
         public virtual @class @class { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

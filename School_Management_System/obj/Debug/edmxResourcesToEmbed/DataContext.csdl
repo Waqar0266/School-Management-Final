@@ -170,6 +170,7 @@
     <NavigationProperty Name="fees" Relationship="Self.FK__fee__student_id__21B6055D" FromRole="student" ToRole="fee" />
     <NavigationProperty Name="parent" Relationship="Self.fk_parent_id" FromRole="student" ToRole="parent" />
     <NavigationProperty Name="student_attendance" Relationship="Self.fk_student_id" FromRole="student" ToRole="student_attendance" />
+    <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="student_attendance">
     <Key>
