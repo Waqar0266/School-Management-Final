@@ -120,6 +120,8 @@ namespace School_Management_System.Student
         {
             using (SchoolManagementSystemEntities schoolManagementSystemEntities = new SchoolManagementSystemEntities())
             {
+                ///asad
+                ///waqar if
                 var getStudentDetails = schoolManagementSystemEntities.students.Where(x => x.std_id == studentId).FirstOrDefault();
                 if (getStudentDetails != null)
                 {
