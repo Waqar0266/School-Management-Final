@@ -22,6 +22,7 @@ namespace School_Management_System.Class
         {
             using (Add_Class cls = new Add_Class())
             {
+
                 cls.lbl = "Add New Class";
                 cls.ShowDialog();
 
