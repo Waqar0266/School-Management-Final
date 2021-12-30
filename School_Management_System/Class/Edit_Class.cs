@@ -20,30 +20,6 @@ namespace School_Management_System.Class
             classId = editClassId;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void classId_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Edit_Class_Load(object sender, EventArgs e)
         {
@@ -62,41 +38,6 @@ namespace School_Management_System.Class
 
                 }
             }
-        }
-
-        private void className_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void className_txtbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void noStd_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void noStd_txtbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void noChairs_txtbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void noTable_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void noTables_txtbox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void classEdit_Btn_Click(object sender, EventArgs e)

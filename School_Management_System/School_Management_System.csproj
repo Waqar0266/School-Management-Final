@@ -237,6 +237,12 @@
     <Compile Include="parent.cs">
       <DependentUpon>DataContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Parent\Edit_Parent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parent\Edit_Parent.Designer.cs">
+      <DependentUpon>Edit_Parent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Parent\Parent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,26 @@
     </Compile>
     <Compile Include="Salary\Salary_Details.Designer.cs">
       <DependentUpon>Salary_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolManagementSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementSystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolManagementSystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementSystemDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolManagementSystemDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementSystemDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolManagementSystemDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="setting\New Role.cs">
       <SubType>Form</SubType>
@@ -316,6 +342,12 @@
     </Compile>
     <Compile Include="subject.cs">
       <DependentUpon>DataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subjects\Edit_Subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subjects\Edit_Subject.Designer.cs">
+      <DependentUpon>Edit_Subject.cs</DependentUpon>
     </Compile>
     <Compile Include="Subjects\subject.cs">
       <SubType>Form</SubType>
@@ -360,6 +392,8 @@
       <DependentUpon>Test_Details.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ClassVM.cs" />
+    <Compile Include="ViewModel\ParentVM.cs" />
+    <Compile Include="ViewModel\SubjectVM.cs" />
     <EmbeddedResource Include="Assets\add_assets.resx">
       <DependentUpon>add_assets.cs</DependentUpon>
     </EmbeddedResource>
@@ -429,6 +463,9 @@
     <EmbeddedResource Include="Paper\Paper.resx">
       <DependentUpon>Paper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parent\Edit_Parent.resx">
+      <DependentUpon>Edit_Parent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parent\Parent.resx">
       <DependentUpon>Parent.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +505,9 @@
     <EmbeddedResource Include="Student\Student_Details.resx">
       <DependentUpon>Student_Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Subjects\Edit_Subject.resx">
+      <DependentUpon>Edit_Subject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Subjects\subject.resx">
       <DependentUpon>subject.cs</DependentUpon>
     </EmbeddedResource>
@@ -504,6 +544,51 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SchoolManagementSystemDataSet.xsc">
+      <DependentUpon>SchoolManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolManagementSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolManagementSystemDataSet.xss">
+      <DependentUpon>SchoolManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDataSet1.xsc">
+      <DependentUpon>SchoolManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolManagementSystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolManagementSystemDataSet1.xss">
+      <DependentUpon>SchoolManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDataSet2.xsc">
+      <DependentUpon>SchoolManagementSystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolManagementSystemDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolManagementSystemDataSet2.xss">
+      <DependentUpon>SchoolManagementSystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDataSet3.xsc">
+      <DependentUpon>SchoolManagementSystemDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolManagementSystemDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolManagementSystemDataSet3.xss">
+      <DependentUpon>SchoolManagementSystemDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -519,6 +604,10 @@
       <DependentUpon>DataContext.edmx</DependentUpon>
       <LastGenOutput>DataContext.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

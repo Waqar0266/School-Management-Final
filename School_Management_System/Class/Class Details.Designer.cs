@@ -37,6 +37,10 @@
             this.btnupdate = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.class_dataGridView = new System.Windows.Forms.DataGridView();
+            this.classVMBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.classVMBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.classVMBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.classVMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.classId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.className = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.section = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,10 +49,6 @@
             this.noOfTables = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editClass_btn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.deleteClass_btn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.classVMBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.classVMBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.classVMBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.classVMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.class_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classVMBindingSource3)).BeginInit();
@@ -145,7 +145,6 @@
             // 
             // class_dataGridView
             // 
-            this.class_dataGridView.AllowUserToOrderColumns = true;
             this.class_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.class_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.classId,
@@ -162,6 +161,22 @@
             this.class_dataGridView.TabIndex = 2;
             this.class_dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.class_dataGridView_CellClick);
             this.class_dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.class_dataGridView_CellContentClick_1);
+            // 
+            // classVMBindingSource3
+            // 
+            this.classVMBindingSource3.DataSource = typeof(School_Management_System.ViewModel.ClassVM);
+            // 
+            // classVMBindingSource2
+            // 
+            this.classVMBindingSource2.DataSource = typeof(School_Management_System.ViewModel.ClassVM);
+            // 
+            // classVMBindingSource1
+            // 
+            this.classVMBindingSource1.DataSource = typeof(School_Management_System.ViewModel.ClassVM);
+            // 
+            // classVMBindingSource
+            // 
+            this.classVMBindingSource.DataSource = typeof(School_Management_System.ViewModel.ClassVM);
             // 
             // classId
             // 
@@ -222,22 +237,6 @@
             this.deleteClass_btn.ReadOnly = true;
             this.deleteClass_btn.Text = "Delete";
             this.deleteClass_btn.UseColumnTextForButtonValue = true;
-            // 
-            // classVMBindingSource3
-            // 
-            this.classVMBindingSource3.DataSource = typeof(School_Management_System.ViewModel.ClassVM);
-            // 
-            // classVMBindingSource2
-            // 
-            this.classVMBindingSource2.DataSource = typeof(School_Management_System.ViewModel.ClassVM);
-            // 
-            // classVMBindingSource1
-            // 
-            this.classVMBindingSource1.DataSource = typeof(School_Management_System.ViewModel.ClassVM);
-            // 
-            // classVMBindingSource
-            // 
-            this.classVMBindingSource.DataSource = typeof(School_Management_System.ViewModel.ClassVM);
             // 
             // Class_Details
             // 

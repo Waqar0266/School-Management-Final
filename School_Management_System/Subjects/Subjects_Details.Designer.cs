@@ -28,46 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.searchSubject_Combo = new System.Windows.Forms.ComboBox();
+            this.searchSubject_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchSubject_txtbox = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnupdate = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject_dataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Subject_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // searchSubject_Combo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.searchSubject_Combo.FormattingEnabled = true;
+            this.searchSubject_Combo.Items.AddRange(new object[] {
             "Class",
             "Author"});
-            this.comboBox1.Location = new System.Drawing.Point(760, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 29);
-            this.comboBox1.TabIndex = 10;
+            this.searchSubject_Combo.Location = new System.Drawing.Point(760, 23);
+            this.searchSubject_Combo.Name = "searchSubject_Combo";
+            this.searchSubject_Combo.Size = new System.Drawing.Size(133, 29);
+            this.searchSubject_Combo.TabIndex = 10;
             // 
-            // button4
+            // searchSubject_btn
             // 
-            this.button4.BackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1063, 17);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(137, 38);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = false;
+            this.searchSubject_btn.BackColor = System.Drawing.Color.SteelBlue;
+            this.searchSubject_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.searchSubject_btn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchSubject_btn.ForeColor = System.Drawing.Color.White;
+            this.searchSubject_btn.Location = new System.Drawing.Point(1063, 17);
+            this.searchSubject_btn.Name = "searchSubject_btn";
+            this.searchSubject_btn.Size = new System.Drawing.Size(137, 38);
+            this.searchSubject_btn.TabIndex = 9;
+            this.searchSubject_btn.Text = "Search";
+            this.searchSubject_btn.UseVisualStyleBackColor = false;
+            this.searchSubject_btn.Click += new System.EventHandler(this.searchSubject_btn_Click);
             // 
             // label1
             // 
@@ -78,12 +81,13 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Search By Name:";
             // 
-            // textBox1
+            // searchSubject_txtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(899, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 27);
-            this.textBox1.TabIndex = 7;
+            this.searchSubject_txtbox.Location = new System.Drawing.Point(899, 23);
+            this.searchSubject_txtbox.Name = "searchSubject_txtbox";
+            this.searchSubject_txtbox.Size = new System.Drawing.Size(158, 27);
+            this.searchSubject_txtbox.TabIndex = 7;
+            this.searchSubject_txtbox.TextChanged += new System.EventHandler(this.searchSubject_txtbox_TextChanged);
             // 
             // button3
             // 
@@ -114,10 +118,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.searchSubject_Combo);
+            this.panel1.Controls.Add(this.searchSubject_btn);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.searchSubject_txtbox);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.btnupdate);
             this.panel1.Controls.Add(this.btnadd);
@@ -141,41 +145,69 @@
             this.btnupdate.UseVisualStyleBackColor = false;
             this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
-            // dataGridView1
+            // Subject_dataGridView
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 68);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1209, 538);
-            this.dataGridView1.TabIndex = 3;
+            this.Subject_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Subject_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Subject_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.SubjectName,
+            this.Author,
+            this.Descripition,
+            this.Edit,
+            this.Delete});
+            this.Subject_dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Subject_dataGridView.Location = new System.Drawing.Point(0, 68);
+            this.Subject_dataGridView.Name = "Subject_dataGridView";
+            this.Subject_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Subject_dataGridView.Size = new System.Drawing.Size(1209, 538);
+            this.Subject_dataGridView.TabIndex = 3;
+            this.Subject_dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Subject_dataGridView_CellClick);
             // 
-            // Column1
+            // ID
             // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
+            this.ID.FillWeight = 59.08629F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
-            // Column2
+            // SubjectName
             // 
-            this.Column2.HeaderText = "Subject Name";
-            this.Column2.Name = "Column2";
+            this.SubjectName.DataPropertyName = "name_";
+            this.SubjectName.FillWeight = 59.08629F;
+            this.SubjectName.HeaderText = "Subject Name";
+            this.SubjectName.Name = "SubjectName";
+            this.SubjectName.ReadOnly = true;
             // 
-            // Column3
+            // Author
             // 
-            this.Column3.HeaderText = "Author";
-            this.Column3.Name = "Column3";
+            this.Author.DataPropertyName = "author";
+            this.Author.FillWeight = 59.08629F;
+            this.Author.HeaderText = "Author";
+            this.Author.Name = "Author";
+            this.Author.ReadOnly = true;
             // 
-            // Column4
+            // Descripition
             // 
-            this.Column4.HeaderText = "Descripition";
-            this.Column4.Name = "Column4";
+            this.Descripition.DataPropertyName = "descripition";
+            this.Descripition.FillWeight = 59.08629F;
+            this.Descripition.HeaderText = "Descripition";
+            this.Descripition.Name = "Descripition";
+            this.Descripition.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            this.Edit.FillWeight = 30F;
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            // 
+            // Delete
+            // 
+            this.Delete.FillWeight = 30F;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
             // 
             // Subjects_Details
             // 
@@ -183,33 +215,36 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 606);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Subject_dataGridView);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Subjects_Details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subjects_Details";
+            this.Load += new System.EventHandler(this.Subject_Details_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Subject_dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox searchSubject_Combo;
+        private System.Windows.Forms.Button searchSubject_btn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchSubject_txtbox;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnupdate;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridView Subject_dataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Author;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripition;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

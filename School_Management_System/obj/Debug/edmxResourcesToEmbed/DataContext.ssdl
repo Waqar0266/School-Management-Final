@@ -198,7 +198,7 @@
     <Property Name="date_" Type="date" />
     <Property Name="descripition" Type="varchar" MaxLength="200" />
   </EntityType>
-  <Association Name="FK__fee__class_id__20C1E124">
+  <Association Name="FK__fee__class_id__300424B4">
     <End Role="class" Type="Self.class" Multiplicity="0..1" />
     <End Role="fee" Type="Self.fee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -210,7 +210,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__fee__student_id__21B6055D">
+  <Association Name="FK__fee__student_id__30F848ED">
     <End Role="student" Type="Self.student" Multiplicity="0..1" />
     <End Role="fee" Type="Self.fee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -222,7 +222,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Operator__role_i__412EB0B6">
+  <Association Name="FK__Operator__role_i__5070F446">
     <End Role="role" Type="Self.role" Multiplicity="0..1" />
     <End Role="Operator" Type="Self.Operator" Multiplicity="*" />
     <ReferentialConstraint>
@@ -234,7 +234,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__paper__cls_id__29572725">
+  <Association Name="FK__paper__cls_id__38996AB5">
     <End Role="class" Type="Self.class" Multiplicity="0..1" />
     <End Role="paper" Type="Self.paper" Multiplicity="*" />
     <ReferentialConstraint>
@@ -246,7 +246,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__paper__sub_id__2B3F6F97">
+  <Association Name="FK__paper__sub_id__3A81B327">
     <End Role="subject" Type="Self.subject" Multiplicity="0..1" />
     <End Role="paper" Type="Self.paper" Multiplicity="*" />
     <ReferentialConstraint>
@@ -258,7 +258,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__paper__t_id__2A4B4B5E">
+  <Association Name="FK__paper__t_id__398D8EEE">
     <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
     <End Role="paper" Type="Self.paper" Multiplicity="*" />
     <ReferentialConstraint>
@@ -270,7 +270,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__salary__t_id__35BCFE0A">
+  <Association Name="FK__salary__t_id__44FF419A">
     <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
     <End Role="salary" Type="Self.salary" Multiplicity="*" />
     <ReferentialConstraint>
@@ -282,7 +282,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__staff_atte__t_id__38996AB5">
+  <Association Name="FK__staff_atte__t_id__47DBAE45">
     <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
     <End Role="staff_attendance" Type="Self.staff_attendance" Multiplicity="*" />
     <ReferentialConstraint>
@@ -294,7 +294,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__student_a__cls_i__182C9B23">
+  <Association Name="FK__student_a__cls_i__2C3393D0">
     <End Role="class" Type="Self.class" Multiplicity="0..1" />
     <End Role="student_attendance" Type="Self.student_attendance" Multiplicity="*" />
     <ReferentialConstraint>
@@ -306,7 +306,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__subject__class_i__267ABA7A">
+  <Association Name="FK__subject__class_i__35BCFE0A">
     <End Role="class" Type="Self.class" Multiplicity="0..1" />
     <End Role="subject" Type="Self.subject" Multiplicity="*" />
     <ReferentialConstraint>
@@ -318,7 +318,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__test__cls_id__2F10007B">
+  <Association Name="FK__test__cls_id__3E52440B">
     <End Role="class" Type="Self.class" Multiplicity="0..1" />
     <End Role="test" Type="Self.test" Multiplicity="*" />
     <ReferentialConstraint>
@@ -330,7 +330,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__test__sub_id__2E1BDC42">
+  <Association Name="FK__test__sub_id__3D5E1FD2">
     <End Role="subject" Type="Self.subject" Multiplicity="0..1" />
     <End Role="test" Type="Self.test" Multiplicity="*" />
     <ReferentialConstraint>
@@ -396,51 +396,51 @@
     <EntitySet Name="subject" EntityType="Self.subject" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="teacher" EntityType="Self.teacher" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__fee__class_id__20C1E124" Association="Self.FK__fee__class_id__20C1E124">
+    <AssociationSet Name="FK__fee__class_id__300424B4" Association="Self.FK__fee__class_id__300424B4">
       <End Role="class" EntitySet="class" />
       <End Role="fee" EntitySet="fee" />
     </AssociationSet>
-    <AssociationSet Name="FK__fee__student_id__21B6055D" Association="Self.FK__fee__student_id__21B6055D">
+    <AssociationSet Name="FK__fee__student_id__30F848ED" Association="Self.FK__fee__student_id__30F848ED">
       <End Role="student" EntitySet="student" />
       <End Role="fee" EntitySet="fee" />
     </AssociationSet>
-    <AssociationSet Name="FK__Operator__role_i__412EB0B6" Association="Self.FK__Operator__role_i__412EB0B6">
+    <AssociationSet Name="FK__Operator__role_i__5070F446" Association="Self.FK__Operator__role_i__5070F446">
       <End Role="role" EntitySet="role" />
       <End Role="Operator" EntitySet="Operator" />
     </AssociationSet>
-    <AssociationSet Name="FK__paper__cls_id__29572725" Association="Self.FK__paper__cls_id__29572725">
+    <AssociationSet Name="FK__paper__cls_id__38996AB5" Association="Self.FK__paper__cls_id__38996AB5">
       <End Role="class" EntitySet="class" />
       <End Role="paper" EntitySet="paper" />
     </AssociationSet>
-    <AssociationSet Name="FK__paper__sub_id__2B3F6F97" Association="Self.FK__paper__sub_id__2B3F6F97">
+    <AssociationSet Name="FK__paper__sub_id__3A81B327" Association="Self.FK__paper__sub_id__3A81B327">
       <End Role="subject" EntitySet="subject" />
       <End Role="paper" EntitySet="paper" />
     </AssociationSet>
-    <AssociationSet Name="FK__paper__t_id__2A4B4B5E" Association="Self.FK__paper__t_id__2A4B4B5E">
+    <AssociationSet Name="FK__paper__t_id__398D8EEE" Association="Self.FK__paper__t_id__398D8EEE">
       <End Role="teacher" EntitySet="teacher" />
       <End Role="paper" EntitySet="paper" />
     </AssociationSet>
-    <AssociationSet Name="FK__salary__t_id__35BCFE0A" Association="Self.FK__salary__t_id__35BCFE0A">
+    <AssociationSet Name="FK__salary__t_id__44FF419A" Association="Self.FK__salary__t_id__44FF419A">
       <End Role="teacher" EntitySet="teacher" />
       <End Role="salary" EntitySet="salary" />
     </AssociationSet>
-    <AssociationSet Name="FK__staff_atte__t_id__38996AB5" Association="Self.FK__staff_atte__t_id__38996AB5">
+    <AssociationSet Name="FK__staff_atte__t_id__47DBAE45" Association="Self.FK__staff_atte__t_id__47DBAE45">
       <End Role="teacher" EntitySet="teacher" />
       <End Role="staff_attendance" EntitySet="staff_attendance" />
     </AssociationSet>
-    <AssociationSet Name="FK__student_a__cls_i__182C9B23" Association="Self.FK__student_a__cls_i__182C9B23">
+    <AssociationSet Name="FK__student_a__cls_i__2C3393D0" Association="Self.FK__student_a__cls_i__2C3393D0">
       <End Role="class" EntitySet="class" />
       <End Role="student_attendance" EntitySet="student_attendance" />
     </AssociationSet>
-    <AssociationSet Name="FK__subject__class_i__267ABA7A" Association="Self.FK__subject__class_i__267ABA7A">
+    <AssociationSet Name="FK__subject__class_i__35BCFE0A" Association="Self.FK__subject__class_i__35BCFE0A">
       <End Role="class" EntitySet="class" />
       <End Role="subject" EntitySet="subject" />
     </AssociationSet>
-    <AssociationSet Name="FK__test__cls_id__2F10007B" Association="Self.FK__test__cls_id__2F10007B">
+    <AssociationSet Name="FK__test__cls_id__3E52440B" Association="Self.FK__test__cls_id__3E52440B">
       <End Role="class" EntitySet="class" />
       <End Role="test" EntitySet="test" />
     </AssociationSet>
-    <AssociationSet Name="FK__test__sub_id__2E1BDC42" Association="Self.FK__test__sub_id__2E1BDC42">
+    <AssociationSet Name="FK__test__sub_id__3D5E1FD2" Association="Self.FK__test__sub_id__3D5E1FD2">
       <End Role="subject" EntitySet="subject" />
       <End Role="test" EntitySet="test" />
     </AssociationSet>

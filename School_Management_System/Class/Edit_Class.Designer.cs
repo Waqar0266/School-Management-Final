@@ -55,7 +55,7 @@ namespace School_Management_System.Class
             this.classId_lbl.Size = new System.Drawing.Size(67, 19);
             this.classId_lbl.TabIndex = 0;
             this.classId_lbl.Text = "Class Id";
-            this.classId_lbl.Click += new System.EventHandler(this.classId_Click);
+          
             // 
             // classId_txtbox
             // 
@@ -65,7 +65,7 @@ namespace School_Management_System.Class
             this.classId_txtbox.ReadOnly = true;
             this.classId_txtbox.Size = new System.Drawing.Size(225, 27);
             this.classId_txtbox.TabIndex = 1;
-            this.classId_txtbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+          
             // 
             // className_txtbox
             // 
@@ -74,7 +74,7 @@ namespace School_Management_System.Class
             this.className_txtbox.Name = "className_txtbox";
             this.className_txtbox.Size = new System.Drawing.Size(225, 27);
             this.className_txtbox.TabIndex = 3;
-            this.className_txtbox.TextChanged += new System.EventHandler(this.className_txtbox_TextChanged);
+           
             // 
             // className_lbl
             // 
@@ -86,7 +86,7 @@ namespace School_Management_System.Class
             this.className_lbl.Size = new System.Drawing.Size(101, 19);
             this.className_lbl.TabIndex = 2;
             this.className_lbl.Text = "Class Name";
-            this.className_lbl.Click += new System.EventHandler(this.className_lbl_Click);
+            
             // 
             // section_txtbox
             // 
@@ -95,7 +95,7 @@ namespace School_Management_System.Class
             this.section_txtbox.Name = "section_txtbox";
             this.section_txtbox.Size = new System.Drawing.Size(225, 27);
             this.section_txtbox.TabIndex = 5;
-            this.section_txtbox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+           
             // 
             // section_lbl
             // 
@@ -107,7 +107,7 @@ namespace School_Management_System.Class
             this.section_lbl.Size = new System.Drawing.Size(65, 19);
             this.section_lbl.TabIndex = 4;
             this.section_lbl.Text = "Section";
-            this.section_lbl.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // noStd_txtbox
             // 
@@ -116,7 +116,7 @@ namespace School_Management_System.Class
             this.noStd_txtbox.Name = "noStd_txtbox";
             this.noStd_txtbox.Size = new System.Drawing.Size(225, 27);
             this.noStd_txtbox.TabIndex = 7;
-            this.noStd_txtbox.TextChanged += new System.EventHandler(this.noStd_txtbox_TextChanged);
+           
             // 
             // noStd_lbl
             // 
@@ -128,7 +128,7 @@ namespace School_Management_System.Class
             this.noStd_lbl.Size = new System.Drawing.Size(119, 19);
             this.noStd_lbl.TabIndex = 6;
             this.noStd_lbl.Text = "No Of Students";
-            this.noStd_lbl.Click += new System.EventHandler(this.noStd_lbl_Click);
+           
             // 
             // noChairs_txtbox
             // 
@@ -137,7 +137,7 @@ namespace School_Management_System.Class
             this.noChairs_txtbox.Name = "noChairs_txtbox";
             this.noChairs_txtbox.Size = new System.Drawing.Size(225, 27);
             this.noChairs_txtbox.TabIndex = 9;
-            this.noChairs_txtbox.TextChanged += new System.EventHandler(this.noChairs_txtbox_TextChanged);
+           
             // 
             // noChairs_lbl
             // 
@@ -149,7 +149,7 @@ namespace School_Management_System.Class
             this.noChairs_lbl.Size = new System.Drawing.Size(104, 19);
             this.noChairs_lbl.TabIndex = 8;
             this.noChairs_lbl.Text = "No Of Chairs";
-            this.noChairs_lbl.Click += new System.EventHandler(this.label4_Click);
+            
             // 
             // noTables_txtbox
             // 
@@ -158,7 +158,7 @@ namespace School_Management_System.Class
             this.noTables_txtbox.Name = "noTables_txtbox";
             this.noTables_txtbox.Size = new System.Drawing.Size(225, 27);
             this.noTables_txtbox.TabIndex = 11;
-            this.noTables_txtbox.TextChanged += new System.EventHandler(this.noTables_txtbox_TextChanged);
+           
             // 
             // noTable_lbl
             // 
@@ -170,7 +170,7 @@ namespace School_Management_System.Class
             this.noTable_lbl.Size = new System.Drawing.Size(105, 19);
             this.noTable_lbl.TabIndex = 10;
             this.noTable_lbl.Text = "No Of Tables";
-            this.noTable_lbl.Click += new System.EventHandler(this.noTable_lbl_Click);
+            
             // 
             // classEdit_Btn
             // 

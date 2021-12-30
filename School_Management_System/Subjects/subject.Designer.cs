@@ -28,16 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.subjectName = new System.Windows.Forms.TextBox();
+            this.subjectClassID = new System.Windows.Forms.ComboBox();
+            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.schoolManagementSystemDataSet1 = new School_Management_System.SchoolManagementSystemDataSet1();
             this.lblsub = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.subjectAuth = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.btnadd = new System.Windows.Forms.Button();
+            this.subjectDesc = new System.Windows.Forms.RichTextBox();
+            this.subjectAdd = new System.Windows.Forms.Button();
+            this.classTableAdapter = new School_Management_System.SchoolManagementSystemDataSet1TableAdapters.classTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolManagementSystemDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,20 +57,32 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
-            // textBox1
+            // subjectName
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 27);
-            this.textBox1.TabIndex = 1;
+            this.subjectName.Location = new System.Drawing.Point(136, 69);
+            this.subjectName.Name = "subjectName";
+            this.subjectName.Size = new System.Drawing.Size(164, 27);
+            this.subjectName.TabIndex = 1;
             // 
-            // comboBox1
+            // subjectClassID
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(445, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 29);
-            this.comboBox1.TabIndex = 2;
+            this.subjectClassID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.classBindingSource, "class_id", true));
+            this.subjectClassID.FormattingEnabled = true;
+            this.subjectClassID.Location = new System.Drawing.Point(445, 69);
+            this.subjectClassID.Name = "subjectClassID";
+            this.subjectClassID.Size = new System.Drawing.Size(174, 29);
+            this.subjectClassID.TabIndex = 2;
+            this.subjectClassID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // classBindingSource
+            // 
+            this.classBindingSource.DataMember = "class";
+            this.classBindingSource.DataSource = this.schoolManagementSystemDataSet1;
+            // 
+            // schoolManagementSystemDataSet1
+            // 
+            this.schoolManagementSystemDataSet1.DataSetName = "SchoolManagementSystemDataSet1";
+            this.schoolManagementSystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblsub
             // 
@@ -99,12 +117,12 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Author:";
             // 
-            // textBox2
+            // subjectAuth
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 27);
-            this.textBox2.TabIndex = 1;
+            this.subjectAuth.Location = new System.Drawing.Point(136, 114);
+            this.subjectAuth.Name = "subjectAuth";
+            this.subjectAuth.Size = new System.Drawing.Size(164, 27);
+            this.subjectAuth.TabIndex = 1;
             // 
             // label4
             // 
@@ -117,49 +135,56 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Descripition:";
             // 
-            // richTextBox1
+            // subjectDesc
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(445, 118);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(174, 96);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.subjectDesc.Location = new System.Drawing.Point(445, 118);
+            this.subjectDesc.Name = "subjectDesc";
+            this.subjectDesc.Size = new System.Drawing.Size(174, 96);
+            this.subjectDesc.TabIndex = 6;
+            this.subjectDesc.Text = "";
             // 
-            // btnadd
+            // subjectAdd
             // 
-            this.btnadd.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnadd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.ForeColor = System.Drawing.Color.White;
-            this.btnadd.Location = new System.Drawing.Point(175, 180);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(200, 52);
-            this.btnadd.TabIndex = 7;
-            this.btnadd.Text = "Add Subject";
-            this.btnadd.UseVisualStyleBackColor = false;
+            this.subjectAdd.BackColor = System.Drawing.Color.SteelBlue;
+            this.subjectAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.subjectAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subjectAdd.ForeColor = System.Drawing.Color.White;
+            this.subjectAdd.Location = new System.Drawing.Point(175, 180);
+            this.subjectAdd.Name = "subjectAdd";
+            this.subjectAdd.Size = new System.Drawing.Size(200, 52);
+            this.subjectAdd.TabIndex = 7;
+            this.subjectAdd.Text = "Add Subject";
+            this.subjectAdd.UseVisualStyleBackColor = false;
+            this.subjectAdd.Click += new System.EventHandler(this.subjectAdd_Click);
+            // 
+            // classTableAdapter
+            // 
+            this.classTableAdapter.ClearBeforeFill = true;
             // 
             // subject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 261);
-            this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.subjectAdd);
+            this.Controls.Add(this.subjectDesc);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblsub);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.subjectClassID);
+            this.Controls.Add(this.subjectAuth);
+            this.Controls.Add(this.subjectName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "subject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "subject";
             this.Load += new System.EventHandler(this.subject_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolManagementSystemDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,14 +193,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox subjectName;
+        private System.Windows.Forms.ComboBox subjectClassID;
         private System.Windows.Forms.Label lblsub;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox subjectAuth;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.RichTextBox subjectDesc;
+        private System.Windows.Forms.Button subjectAdd;
+        private SchoolManagementSystemDataSet1 schoolManagementSystemDataSet1;
+        private System.Windows.Forms.BindingSource classBindingSource;
+        private SchoolManagementSystemDataSet1TableAdapters.classTableAdapter classTableAdapter;
     }
 }
